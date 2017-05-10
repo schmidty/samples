@@ -1,0 +1,42 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "PIV15-1699-1",
+        "author": "schmidty",
+        "changes": [
+          {
+            "createTable": {
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "type": "INT",
+                    "autoIncrement": true,
+                    "constraints": {
+                      "primaryKey": true
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "school_name",
+                    "type": "VARCHAR(500)"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "code",
+                    "type": "VARCHAR(50)",
+                    "nullable": true
+                  }
+                }
+               ]
+              ,
+              "tableName": "dw_test_import_school_names"
+            }
+          }
+         ]
+       }
+    }]
+}

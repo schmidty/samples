@@ -1,0 +1,24 @@
+Commands To Use With Liquibase
+- http://www.liquibase.org/quickstart.html
+- http://www.liquibase.org/documentation/index.html 
+
+# Show the SQL or dump to a file
+liquibase --changeLogFile=./path/to/changeset/file.json --url=jdbc:mysql://localhost/db_name --username=username --password=password   updateSQL
+
+# CREATE TABLE
+liquibase --changeLogFile=./path/to/changeset/file.json --url=jdbc:mysql://localhost/tempDB --username=username --password=password --logLevel=debug generateChangeLog
+
+# DATA UPDATE
+liquibase --changeLogFile=./path/to/changeset/file.json --url=jdbc:mysql://localhost/tempDB --diffTypes=data --username=username --password=password --logLevel=debug generateChangeLog
+
+
+# Single changeset or migration change
+liquibase --changeLogFile=./path/to/changeset/file.json --url=jdbc:mysql://localhost/db_name --username=username --password=password --logLevel=warning update
+
+
+# This will create a SQL file from Docker MySQL instance
+liquibase --changeLogFile=./path/to/changeset/file.json --url=jdbc:mysql://127.0.0.1/db_name --username=username --password=   updateSQL > ~/five-star/tasks/PIV15-1255/liquibase/default-data.sql
+
+
+# For Docker (since I am tired of writing it out)
+liquibase-bin/liquibase --changeLogFile=./path/to/changeset/file.json --url=jdbc:mysql://localhost/db_name --username=username --logLevel=warning update

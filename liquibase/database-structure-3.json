@@ -1,0 +1,25 @@
+{ "databaseChangeLog": [
+  {
+    "changeSet": {
+      "id": "p0017-1802-1",
+      "author": "schmidty",
+      "changes": [
+                {
+                  "createIndex": {
+                    "columns": [
+                      {
+                        "column": {
+                          "name": "school_name"
+                        }
+                      }
+                      ]
+                    ,
+                    "indexName": "school_name",
+                    "tableName": "dw_test_import_school_names",
+                    "unique": false
+                  }
+          }
+      ]}
+  }
+  ]
+}

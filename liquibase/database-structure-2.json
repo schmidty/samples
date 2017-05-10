@@ -1,0 +1,26 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+      "id": "PIV15-1699-2",
+      "author": "schmidty",
+      "changes": {
+        "addColumn": {
+            "columns": [
+              {
+                "column": {
+                  "name": "school_name_id",
+                  "type": "INT(11)",
+                  "constraints": {
+                    "nullable": true
+                  }
+                }
+              }
+            ],
+            "tableName": "dw_scores"
+        }
+      }
+    }
+   }
+  ]
+}
